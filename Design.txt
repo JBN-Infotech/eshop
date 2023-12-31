@@ -1,3 +1,5 @@
+ehsop repositories and features
+
 eshop-categories // localhost:3000 rails s
   - crud
 eshop-products // localhost:3003   rails s -p 3003
