@@ -13,7 +13,6 @@ export class BreadcrumbComponent {
   constructor(private router: Router) {}
 
   navigateTo(path: string) {
-    console.log(path)
     this.router.navigateByUrl(path);
   }
 

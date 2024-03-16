@@ -4,6 +4,7 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import { UserService } from '../user.service';
 import { Router } from '@angular/router';
 import { BreadcrumbComponent } from '../../breadcrumb/breadcrumb.component';
+import { routeConfig } from '../../app.routes';
 
 @Component({
   selector: 'app-create',
@@ -14,9 +15,10 @@ import { BreadcrumbComponent } from '../../breadcrumb/breadcrumb.component';
 })
 export class CreateComponent {
   form!: FormGroup;
+  breadcrumbs!: {title: string}[];
 
   constructor(public userService: UserService, private router: Router) {
-
+    this.breadcrumbs = [routeConfig.home, routeConfig.users, routeConfig.newUser];
   }
 
   ngOnInit() {
