@@ -1,0 +1,38 @@
+rvm use ruby-3.0.5@eshop
+
+eshop repositories and features
+
+eshop-categories // localhost:3000 rails s
+  - crud
+eshop-products // localhost:3003   rails s -p 3003
+  - crud
+eshop-users // localhost:3002      rails s -p 3002
+  - http://localhost:3002/api/v1/users
+eshop-ui // localhost:3001         nvm use 18.12.0 npm start
+  - home *
+  - login *
+  - signup *
+  - categories
+    - index
+    - new
+    - edit
+  - products
+    - index
+    - new
+    - edit
+  - users
+    - index
+    - new
+    - edit
+- docker
+  - 4 docker images upload to Azure container registry
+  - store these images in repository
+  - create a cloud
+- helem
+  - 5 docker runs as a cluster
+- kubernetes
+- azure
+
+
+https://www.youtube.com/watch?v=ZGnMqKg-Cq4
+https://www.youtube.com/watch?v=sh4WrNGDvQM

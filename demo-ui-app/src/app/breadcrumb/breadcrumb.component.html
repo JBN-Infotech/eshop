@@ -1,0 +1,11 @@
+<nav aria-label="breadcrumb" class="app-breadcrumb">
+  <ol class="breadcrumb">
+    <li
+      *ngFor="let crumb of breadcrumbs"
+      class="breadcrumb-item"
+      aria-current="page">
+        <a href="#" *ngIf="crumb.path" (click)="navigateTo(crumb.path)">{{ crumb.title }}</a>
+        <span *ngIf="!crumb.path">{{ crumb.title }}</span>
+    </li>
+  </ol>
+</nav>

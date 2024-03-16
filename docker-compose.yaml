@@ -1,0 +1,21 @@
+services:
+  eshop-categories:
+    build:
+      context: .
+      dockerfile: ./eshop-categories/Dockerfile
+    image: eshop-categories:0.0.1
+    restart: on-failure
+    ports: ["3000:80"]
+    network_mode: 'host'
+    # environment:
+      # SERVICE_ID_STRING: "Talentspire.Services.Auth service Id, v1.0.0"
+      # ASPNETCORE_URLS: "http://+:80;http://+:443"
+      # K8__Namespace: "tsservices_dev"
+  # eshop-products:
+  #   build:
+  #     context: .
+  #     dockerfile: ./eshop-categories/Dockerfile
+  #   image: eshop-categories:0.0.1
+  #   restart: on-failure
+  #   ports: ["3000:80"]
+  #   network_mode: 'nat'

@@ -1,0 +1,19 @@
+<div class="container page-container">
+  
+  <div class="container-fluid d-flex justify-content-between align-items-center">
+    <div class="container-fluid d-flex flex-column">
+      <h1 class="center">View User</h1>
+      <app-breadcrumb [breadcrumbs]="breadcrumbs"></app-breadcrumb>
+    </div>
+    <div class="d-flex">
+      <a href="#" routerLink="/user/index/" class="btn-btn-warning">Back</a>
+    </div>
+  </div>
+  
+  <div>
+    <strong>ID:</strong><p>{{user.id}}</p>
+    <strong>Name:</strong><p>{{user.username}}</p>
+    <strong>PAssword:</strong><p>{{user.password}}</p>
+    <strong>Email:</strong><p>{{user.email}}</p>
+  </div>
+</div>
