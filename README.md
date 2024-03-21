@@ -7,6 +7,12 @@ This is a demo app to learn about
 5. Docker
 6. Kubernetes
 
+# Database
+  - PostgreSQL
+  - eshop_development
+  - rails db:create
+  - rails db:migrate
+
 # demo-ui-app
   - UI-only app using Angular JS APP with Bootstrap for user module
   - Uses the API from eshop-users
@@ -14,7 +20,7 @@ This is a demo app to learn about
   - ng s
 
 # eshop-categories
-  - API only app to manage CRUD for categories
+  - API-only app to manage CRUD for categories
   - rvm use ruby-3.0.5@eshop
   - Ruby on rails
   - rails s
@@ -54,6 +60,17 @@ This is a demo app to learn about
     - index
     - new
     - edit
+
+# node-app
+  - node helloWorld.js
+  - http://localhost:8080/
+
+# node-postgres
+  - using express to perform the user crud operations
+  - mkdir node-postgres 
+  - npm init -y
+  - npm install express pg
+  - node app.js
 
 # TODO - NodeJS App
 # TODO - ASP.NET C# App
