@@ -7,37 +7,38 @@ This is a demo app to learn about
 5. Docker
 6. Kubernetes
 
-
 # demo-ui-app
-() UI for users module
-() Angular JS APP with Bootstrap
-() Uses the API from eshop-users
-() nvm use 18.13
-() ng s
+  - UI-only app using Angular JS APP with Bootstrap for user module
+  - Uses the API from eshop-users
+  - nvm use 18.13
+  - ng s
 
 # eshop-categories
-rvm use ruby-3.0.5@eshop
-Ruby on rails
-rails s
-localhost:3000
+  - API only app to manage CRUD for categories
+  - rvm use ruby-3.0.5@eshop
+  - Ruby on rails
+  - rails s
+  - localhost:3000
 
 # eshop-products
-rvm use ruby-3.0.5@eshop
-Ruby on rails
-rails s -p 3003
-localhost:3003
-
+  - API-only app to manage CRUD for products
+  - rvm use ruby-3.0.5@eshop
+  - Ruby on rails
+  - rails s -p 3003
+  - localhost:3003
 # eshop-users
-rvm use ruby-3.0.5@eshop
-Ruby on rails
-rails s -p 3002
-localhost:3002
+  - API-only app to manage CRUD for users
+  - rvm use ruby-3.0.5@eshop
+  - Ruby on rails
+  - rails s -p 3002
+  - localhost:3002
 
 # eshop-ui
-React JS app with Carbon components
-nvm use 18.12.0
-npm start
-localhost:3001
+  - UI-only app using React JS app with Carbon components
+  - nvm use 18.12.0
+  - npm start
+  - localhost:3001
+
   - home *
   - login *
   - signup *
@@ -54,12 +55,16 @@ localhost:3001
     - new
     - edit
 
-# Docker
-  - 4 docker images upload to Azure container registry
-  - store these images in repository
+# TODO - NodeJS App
+# TODO - ASP.NET C# App
+
+
+# TODO - Docker
+  - 4 docker images to be uploaded to Azure container registry
+  - store these images in the repository.
   - create a cloud
   
-# Helem
+# TODO - Helem
   - 5 docker runs as a cluster
 - kubernetes
 - azure
