@@ -1,3 +1,4 @@
+Use the gemset
 rvm use ruby-3.0.5@eshop
 
 eshop repositories and features
