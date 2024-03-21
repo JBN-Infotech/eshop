@@ -1,4 +1,4 @@
-# Eshop
+# Eshop - WIP
 This is a demo app to learn about
 1. Microservices
 2. React
@@ -71,5 +71,5 @@ This is a demo app to learn about
 
 
 
-https://www.youtube.com/watch?v=ZGnMqKg-Cq4
-https://www.youtube.com/watch?v=sh4WrNGDvQM
+- https://www.youtube.com/watch?v=ZGnMqKg-Cq4
+- https://www.youtube.com/watch?v=sh4WrNGDvQM
