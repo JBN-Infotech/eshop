@@ -38,6 +38,11 @@ This is a demo app to learn about
   - Ruby on rails
   - rails s -p 3002
   - localhost:3002
+  - podman machine stop
+  - podman build -t eshop-users . 
+  - podman machine start
+  - podman run -d -p 3002:3002 eshop-users
+  - podman ps
 
 # eshop-ui
   - UI-only app using React JS app with Carbon components
