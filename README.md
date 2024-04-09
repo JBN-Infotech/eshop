@@ -38,11 +38,24 @@ This is a demo app to learn about
   - Ruby on rails
   - rails s -p 3002
   - localhost:3002
+
+  - docker --version (26)
+  - docker-compose --version (2.26)
+
+  - podman version 5.0.0
   - podman machine stop
-  - podman build -t eshop-users . 
   - podman machine start
+  - podman build -t eshop-users . 
   - podman run -d -p 3002:3002 eshop-users
   - podman ps
+
+  - podman build -t eshop-users .
+  - podman-compose up -d
+
+  - podman build -t eshop-users_web:local .
+  - podman-compose down
+  - podman-compose up -d
+
 
 # eshop-ui
   - UI-only app using React JS app with Carbon components
