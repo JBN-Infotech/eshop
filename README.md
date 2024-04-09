@@ -90,6 +90,11 @@ This is a demo app to learn about
   - npm install express pg
   - node app.js
 
+# vue-bookstore
+  - using vue js
+  - https://ui.vuestic.dev/
+  - npm run serve
+
 # TODO - NodeJS App
 # TODO - ASP.NET C# App
 

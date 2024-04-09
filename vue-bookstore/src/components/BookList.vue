@@ -1,7 +1,9 @@
 <template>
   <div>
+    <h3 class="va-h3">
+      Books
+    </h3>
     <BreadCrumbs/>
-    <h1>Book List</h1>
     <div v-if="loading">Loading...</div>
     <div v-else>
       <div class="va-table-responsive">
@@ -32,6 +34,17 @@
       </div>
     </div>
   </div>
+  <VaModal
+    v-model="showModal"
+    ok-text="Ok"
+  >
+    <h3 class="va-h3">
+      Success
+    </h3>
+    <p>
+      Item added to cart.
+    </p>
+  </VaModal>
 </template>
 
 <script>
@@ -46,7 +59,8 @@ export default {
   data() {
     return {
       products: [],
-      loading: true
+      loading: true,
+      showModal: false,
     };
   },
   mounted() {
@@ -71,6 +85,7 @@ export default {
       // Call a method to add the selected product to the cart
       // You'll need to implement this method in your ShoppingCart component
       console.log('Adding to cart:', product);
+      this.showModal = true;
     }
   }
 };

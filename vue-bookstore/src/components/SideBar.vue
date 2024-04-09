@@ -5,11 +5,11 @@
       width="100%"
       minimized-width="64px"
     >
-      <template
+      <router-link
         v-for="item in items"
         :key="item.title"
-      >
-        <VaSidebarItem :active="item.active">
+        :to="item.path">
+        <VaSidebarItem :active="isActive(item.path)">
           <VaSidebarItemContent>
             <VaIcon :name="item.icon" />
             <VaSidebarItemTitle>
@@ -17,7 +17,7 @@
             </VaSidebarItemTitle>
           </VaSidebarItemContent>
         </VaSidebarItem>
-      </template>
+        </router-link>
     </VaSidebar>
   </div>
 
@@ -33,12 +33,18 @@ export default {
   data() {
     return {
       items: [
-        { title: "Dashboard", icon: "dashboard" },
-        { title: "Sidebar demo", icon: "room", active: true },
-        { title: "Loop", icon: "loop" },
+        { title: "Home", icon: "home", path: '/' },
+        { title: "Books", icon: "books", active: true, path: '/books'},
+        { title: "About Us", icon: "loop", path: '/about' },
       ],
       minimized: false,
     };
   },
+  methods: {
+    isActive(path) {
+      // Check if the current route's path matches the given path
+      return this.$route.path === path;
+    }
+  }
 };
 </script>
