@@ -50,3 +50,10 @@ export default {
   },
 };
 </script>
+
+
+<style scoped>
+main {
+  padding: 0 30px;
+}
+</style>

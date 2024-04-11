@@ -4,34 +4,40 @@
       Books
     </h3>
     <BreadCrumbs/>
+    <br/>
     <div v-if="loading">Loading...</div>
     <div v-else>
-      <div class="va-table-responsive">
-        <table class="va-table">
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Description</th>
-              <th>Price</th>
-              <th>Add to Cart</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr v-for="product in products" :key="product.id">
-              <td>{{ product.name }}</td>
-              <td>{{ product.description }}</td>
-              <td>${{ product.price }}</td>
-              <td>
-                <VaButton 
-                  icon="add"
-                  color="warning"
-                  icon-color="#812E9E"
-                  @click="addToCart(product)"> Add to Cart </VaButton>
-                </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+      <VaCard tag="b">
+        <VaCardTitle>Listing Books</VaCardTitle>
+        <VaCardContent>
+          <div class="va-table-responsive">
+            <table class="va-table">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Description</th>
+                  <th>Price</th>
+                  <th>Add to Cart</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr v-for="product in products" :key="product.id">
+                  <td>{{ product.name }}</td>
+                  <td>{{ product.description }}</td>
+                  <td>${{ product.price }}</td>
+                  <td>
+                    <VaButton 
+                      icon="add"
+                      color="warning"
+                      icon-color="#812E9E"
+                      @click="addToCart(product)"> Add to Cart </VaButton>
+                    </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </VaCardContent>
+      </VaCard>
     </div>
   </div>
   <VaModal
@@ -84,7 +90,10 @@ export default {
     addToCart(product) {
       // Call a method to add the selected product to the cart
       // You'll need to implement this method in your ShoppingCart component
+      this.$store.dispatch('addToCart', product);
       console.log('Adding to cart:', product);
+      console.log('cartItems=', this.$store.getters.cartItems)
+
       this.showModal = true;
     }
   }
