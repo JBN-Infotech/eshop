@@ -88,12 +88,9 @@ export default {
       }, 1000); // Simulate 1 second delay
     },
     addToCart(product) {
-      // Call a method to add the selected product to the cart
-      // You'll need to implement this method in your ShoppingCart component
       this.$store.dispatch('addToCart', product);
       console.log('Adding to cart:', product);
-      console.log('cartItems=', this.$store.getters.cartItems)
-
+      console.log('cartItems=', this.$store.getters.cartItems);
       this.showModal = true;
     }
   }
