@@ -1,0 +1,15 @@
+C:\Users\JEFF\Workspace3\eshop\CSharp-ConsoleApp1\bin\Debug\net8.0\CSharp-ConsoleApp1.exe
+C:\Users\JEFF\Workspace3\eshop\CSharp-ConsoleApp1\bin\Debug\net8.0\CSharp-ConsoleApp1.deps.json
+C:\Users\JEFF\Workspace3\eshop\CSharp-ConsoleApp1\bin\Debug\net8.0\CSharp-ConsoleApp1.runtimeconfig.json
+C:\Users\JEFF\Workspace3\eshop\CSharp-ConsoleApp1\bin\Debug\net8.0\CSharp-ConsoleApp1.dll
+C:\Users\JEFF\Workspace3\eshop\CSharp-ConsoleApp1\bin\Debug\net8.0\CSharp-ConsoleApp1.pdb
+C:\Users\JEFF\Workspace3\eshop\CSharp-ConsoleApp1\obj\Debug\net8.0\CSharp-ConsoleApp1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\JEFF\Workspace3\eshop\CSharp-ConsoleApp1\obj\Debug\net8.0\CSharp-ConsoleApp1.AssemblyInfoInputs.cache
+C:\Users\JEFF\Workspace3\eshop\CSharp-ConsoleApp1\obj\Debug\net8.0\CSharp-ConsoleApp1.AssemblyInfo.cs
+C:\Users\JEFF\Workspace3\eshop\CSharp-ConsoleApp1\obj\Debug\net8.0\CSharp-ConsoleApp1.csproj.CoreCompileInputs.cache
+C:\Users\JEFF\Workspace3\eshop\CSharp-ConsoleApp1\obj\Debug\net8.0\CSharp-ConsoleApp1.sourcelink.json
+C:\Users\JEFF\Workspace3\eshop\CSharp-ConsoleApp1\obj\Debug\net8.0\CSharp-ConsoleApp1.dll
+C:\Users\JEFF\Workspace3\eshop\CSharp-ConsoleApp1\obj\Debug\net8.0\refint\CSharp-ConsoleApp1.dll
+C:\Users\JEFF\Workspace3\eshop\CSharp-ConsoleApp1\obj\Debug\net8.0\CSharp-ConsoleApp1.pdb
+C:\Users\JEFF\Workspace3\eshop\CSharp-ConsoleApp1\obj\Debug\net8.0\CSharp-ConsoleApp1.genruntimeconfig.cache
+C:\Users\JEFF\Workspace3\eshop\CSharp-ConsoleApp1\obj\Debug\net8.0\ref\CSharp-ConsoleApp1.dll
