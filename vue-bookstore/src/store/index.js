@@ -8,7 +8,13 @@ export default createStore({
   },
   mutations: {
     ADD_TO_CART(state, item) {
-      state.cart.push(item);
+      const existing = state.cart.find((cartItem) => cartItem.id === item.id);
+      if (existing) {
+        existing.count = existing.count + 1;
+        existing.total = existing.count * existing.price;
+      } else {
+        state.cart.push({...item, count: 1, total: item.price});
+      }
     },
   },
   actions: {

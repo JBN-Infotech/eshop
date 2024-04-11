@@ -5,68 +5,36 @@
     </h3>
     <BreadCrumbs/>
     <br/>
-    <div v-if="loading">Loading...</div>
-    <div v-else>
-      <VaCard tag="b">
-        <VaCardTitle>Listing Books</VaCardTitle>
-        <VaCardContent>
-          <div class="va-table-responsive">
-            <table class="va-table">
-              <thead>
-                <tr>
-                  <th>Name</th>
-                  <th>Description</th>
-                  <th>Price</th>
-                  <th>Add to Cart</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr v-for="product in products" :key="product.id">
-                  <td>{{ product.name }}</td>
-                  <td>{{ product.description }}</td>
-                  <td>${{ product.price }}</td>
-                  <td>
-                    <VaButton 
-                      icon="add"
-                      color="warning"
-                      icon-color="#812E9E"
-                      @click="addToCart(product)"> Add to Cart </VaButton>
-                    </td>
-                </tr>
-              </tbody>
-            </table>
+    <VaCard tag="b">
+      <VaCardTitle>Listing Books</VaCardTitle>
+      <VaCardContent>
+        <div v-if="loading"><VaProgressBar indeterminate /></div>
+        <div v-else>
+          <div class="flex flex-wrap gap-5 book-list">
+            <VaCard v-for="product in products" :key="product.id" square outlined>
+              <BookListItem :product="product" :callback="handleCallback"/>
+            </VaCard>
           </div>
-        </VaCardContent>
-      </VaCard>
-    </div>
+        </div>
+      </VaCardContent>
+    </VaCard>
   </div>
-  <VaModal
-    v-model="showModal"
-    ok-text="Ok"
-  >
-    <h3 class="va-h3">
-      Success
-    </h3>
-    <p>
-      Item added to cart.
-    </p>
-  </VaModal>
 </template>
 
 <script>
 // @ is an alias to /src
 import BreadCrumbs from './BreadCrumbs.vue';
-
+import BookListItem from './BookListItem.vue';
 export default {
   name: 'BookList',
   components: {
-    BreadCrumbs
+    BreadCrumbs,
+    BookListItem,
   },
   data() {
     return {
       products: [],
       loading: true,
-      showModal: false,
     };
   },
   mounted() {
@@ -82,21 +50,34 @@ export default {
           { id: 1, name: 'Product 1', description: 'Description for Product 1', price: 10 },
           { id: 2, name: 'Product 2', description: 'Description for Product 2', price: 20 },
           { id: 3, name: 'Product 3', description: 'Description for Product 3', price: 30 },
+          { id: 4, name: 'Product 4', description: 'Description for Product 4', price: 10 },
+          { id: 5, name: 'Product 5', description: 'Description for Product 5', price: 20 },
+          { id: 6, name: 'Product 6', description: 'Description for Product 6', price: 30 },
           // Add more products as needed
         ];
         this.loading = false;
       }, 1000); // Simulate 1 second delay
     },
-    addToCart(product) {
-      this.$store.dispatch('addToCart', product);
-      console.log('Adding to cart:', product);
-      console.log('cartItems=', this.$store.getters.cartItems);
-      this.showModal = true;
-    }
+    cartItemCount(product){
+      const inCart = this.$store.getters.cartItems.find((item) => item.id === product.id);
+      return inCart ? inCart.count : 0;
+    },
+    handleCallback(data) {
+      console.log('Received data from child:', data);
+    },
   }
 };
 </script>
 
 <style scoped>
-/* Add CSS styles as needed */
+  .book-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .book-list .va-card {
+    flex: 0 0 calc(20% - 20px); /* Adjust the width and margin as needed */
+    margin-bottom: 20px; /* Adjust the margin as needed */
+  }
 </style>

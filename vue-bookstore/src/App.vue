@@ -24,54 +24,7 @@
           </VaNavbarItem>
         </template>
         <template #right>
-          <VaDropdown>
-            <template #anchor>
-              <VaButton 
-                icon="book"
-                color="warning"
-                icon-color="#812E9E"
-                @click="showCart()"> Cart ({{ this.$store.getters.cartItems.length }})</VaButton>
-            </template>
-            <VaModal v-model="showModal" ok-text="Ok">
-                <h3 class="va-h3">
-                  Cart
-                </h3>
-                <div class="va-table-responsive">
-                  <table class="va-table">
-                    <thead>
-                      <tr>
-                        <th>Name</th>
-                        <th>Description</th>
-                        <th>Price</th>
-                        <th>Quantity</th>
-                        <th>Total</th>
-                        <th>Delete</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr v-for="product in this.$store.getters.cartItems" :key="product.id">
-                        <td>{{ product.name }}</td>
-                        <td>{{ product.description }}</td>
-                        <td>${{ product.price }}</td>
-                        <td>1</td>
-                        <td>${{ product.price }}</td>
-                        <td>
-                          <VaButton 
-                            icon="delete"
-                            color="danger"
-                            icon-color="#FFF"
-                          > Remove</VaButton>
-                          </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </VaModal>
-        
-            <VaDropdownContent> 
-              
-            </VaDropdownContent>
-          </VaDropdown>
+         <Cart />
           
         </template>
       </VaNavbar>
@@ -93,21 +46,19 @@
 
 <script>
 import SideBar from './components/SideBar.vue';
+import Cart from './components/Cart.vue'
 
 export default {
   name: 'BookList',
   components: {
     SideBar,
+    Cart,
   },
   data() {
-    return {
-      showModal: false,
-    };
+    
   },
   methods: {
-    showCart() {
-      this.showModal = true;
-    } 
+    
   }
 };
 </script>
