@@ -1,0 +1,52 @@
+body{
+  margin: 0;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-style: normal;
+}
+/* Style for the header */
+header {
+    background: #f3f3f3; /* Light grey background */
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    color: #333; /* Dark grey text */
+}
+/* Style for the content area */
+.content {
+    display: flex;
+    justify-content: center;
+    min-height: 200px; /* Set height for demonstration purposes */
+    margin-top: 20px;
+}
+/* Style for the centered div */
+.center-div {
+    width: 80%; /* Width is 50% of its parent container */
+    border: 1px solid #ddd; /* Light grey background */
+    padding: 20px;
+    min-height: 500px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow for some depth */
+    border-radius: 2px; /* Rounded corners */
+}
+
+.code-container {
+    background: #333; /* Dark background for the code block */
+     /* Light text color for readability */
+    padding: 5px;
+    border-radius: 8px; /* Rounded corners for the code block */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    overflow-x: auto; /* Enables horizontal scrolling if code is too wide */
+}
+
+function {
+  color: lightgreen;
+  padding: 10px 0;
+}
+
+/* Styling for the code element itself */
+code {
+  color: #f9f9f9;
+    display: block; /* Makes the code element a block element */
+    white-space: pre; /* Maintains whitespace formatting */
+    font-family: 'Courier New', Courier, monospace; /* Monospace font for better code readability */
+}
+

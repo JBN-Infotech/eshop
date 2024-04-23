@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binary Search</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <script src="binarySearch.js"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+        Binary Search
+    </header>
+    <div class="content">
+        <div class="center-div">
+          <p><h1>Javascript</h1></p>
+          <p>Suppose given a sorted array, find index of a given element</p>
+          <p><b>arr = ['a', 'b', 'c', 'x', 'y', 'x']</b></p>
+          <h2>Ordinary Solution</h2>
+          <div class="code-container">
+            <function>ordinarySolution(arr, 'c')</function>
+            <p>
+              <code id="solution1"></code>
+            </p>
+          </div>
+
+          <p>This works, but this is slower</p>
+          <p>A Regular loop results in <b>LINEAR TIME COMPLEXITY</b> </p>
+          <br/>
+          <h2>Binary Search: Example 1</h2>
+          <p>Figure out the middle index of the array</p>
+          <p>if <b>middle = target</b>, then return</p>
+          <p>if <b>middle > target</b>, then search(left)</p>
+          <p>if <b>middle < target</b></target>, then search(right)</p>
+          <p>Again if <b>middle = target</b></p>
+
+          <div class="code-container">
+            <function>binarySearch1('c', 0, arr.length)</function>
+            <p>
+              <code id="solution2"></code>
+            </p>
+          </div>
+
+          <h2> Binary Search: Example 2</h2>
+          <div class="code-container">
+            <function>binarySearch2([1, 3, 5, 7, 9, 11, 13, 15], 7);</function>
+            <p>
+              <code id="solution3"></code>
+            </p>
+          </div>
+
+
+          <p><h1>Ruby</h1></p>
+          <div class="code-container">
+            <function>binary_search(sorted_array, target)</function>
+            <p>
+              <code id="solution4">
+                
+              </code>
+            </p>
+          </div>
+
+          <p><a href="https://www.youtube.com/watch?v=MFhxShGxHWc">Binary Search Algorithm in 100 Seconds</a></p>   
+        </div>
+    </div>
+
+    <script>
+      const arr = ['a', 'b', 'c', 'x', 'y', 'z'];
+
+      document.getElementById('solution1').textContent = ordinarySolution.toString();
+      const solution1 = ordinarySolution(arr, 'y');
+      console.log('ordinarySolution=', solution1);
+
+      
+      document.getElementById('solution2').textContent = binarySearch1.toString();
+      const solution2 = binarySearch1('y', 0, arr.length);
+      console.log('binarySearch1=', solution2);
+
+      document.getElementById('solution3').textContent = binarySearch2.toString();
+      const solution3 = binarySearch2([1, 3, 5, 7, 9, 11, 13, 15], 7);
+      console.log('binarySearch2=', solution3);
+
+      document.getElementById('solution4').textContent = rubyCode.toString();
+
+    </script>
+
+</body>
+</html>
