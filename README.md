@@ -97,7 +97,6 @@ This is a demo app to learn about
 
 # TODO - ASP.NET C# App
 
-
 # TODO - Docker
   - 4 docker images to be uploaded to Azure container registry
   - store these images in the repository.
