@@ -95,7 +95,6 @@ This is a demo app to learn about
   - https://ui.vuestic.dev/
   - npm run serve
 
-# TODO - NodeJS App
 # TODO - ASP.NET C# App
 
 
